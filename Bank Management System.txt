@@ -4,9 +4,7 @@
 #include<iomanip>
 using namespace std;
 
-//***************************************************************
-//                   CLASS USED IN PROJECT
-//****************************************************************
+
 
 
 class account
@@ -15,17 +13,7 @@ class account
 	char name[50];
 	int deposit;
 	char type;
-public:
-	void create_account();	//function to get data from user
-	void show_account() const;	//function to show data on screen
-	void modify();	//function to add new data
-	void dep(int);	//function to accept amount and add to balance amount
-	void draw(int);	//function to accept amount and subtract from balance amount
-	void report() const;	//function to show data in tabular format
-	int retacno() const;	//function to return account number
-	int retdeposit() const;	//function to return balance amount
-	char rettype() const;	//function to return type of account
-};         //class ends here
+
 
 void account::create_account()
 {
@@ -98,21 +86,6 @@ char account::rettype() const
 }
 
 
-//***************************************************************
-//    	function declaration
-//****************************************************************
-void write_account();	//function to write record in binary file
-void display_sp(int);	//function to display account details given by user
-void modify_account(int);	//function to modify record of file
-void delete_account(int);	//function to delete record of file
-void display_all();		//function to display all account details
-void deposit_withdraw(int, int); // function to desposit/withdraw amount for given account
-void intro();	//introductory screen function
-
-//***************************************************************
-//    	THE MAIN FUNCTION OF PROGRAM
-//****************************************************************
-
 
 int main()
 {
@@ -174,9 +147,6 @@ int main()
 }
 
 
-//***************************************************************
-//    	function to write in file
-//****************************************************************
 
 void write_account()
 {
@@ -188,9 +158,6 @@ void write_account()
 	outFile.close();
 }
 
-//***************************************************************
-//    	function to read specific record from file
-//****************************************************************
 
 void display_sp(int n)
 {
@@ -219,9 +186,6 @@ void display_sp(int n)
 }
 
 
-//***************************************************************
-//    	function to modify record of file
-//****************************************************************
 
 void modify_account(int n)
 {
@@ -254,9 +218,6 @@ void modify_account(int n)
 		cout<<"\n\n Record Not Found ";
 }
 
-//***************************************************************
-//    	function to delete record of file
-//****************************************************************
 
 
 void delete_account(int n)
@@ -286,9 +247,6 @@ void delete_account(int n)
 	cout<<"\n\n\tRecord Deleted ..";
 }
 
-//***************************************************************
-//    	function to display all accounts deposit list
-//****************************************************************
 
 void display_all()
 {
@@ -310,10 +268,6 @@ void display_all()
 	}
 	inFile.close();
 }
-
-//***************************************************************
-//    	function to deposit and withdraw amounts
-//****************************************************************
 
 void deposit_withdraw(int n, int option)
 {
@@ -364,9 +318,6 @@ void deposit_withdraw(int n, int option)
 }
 
 
-//***************************************************************
-//    	INTRODUCTION FUNCTION
-//****************************************************************
 
 
 void intro()
